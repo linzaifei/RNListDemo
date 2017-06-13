@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <React/RCTRootView.h>
+#import <React/RCTBundleURLProvider.h>
 
 @interface ViewController ()
 
@@ -16,8 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    //localhost
+    //192.168.62.59
+   
+    NSURL *jsCodeLocation = [NSURL
+                             URLWithString:@"http://192.168.62.59:8081/index.ios.bundle?platform=ios"];
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"RNListDemo" initialProperties:nil launchOptions:nil];
+    
+    self.view = rootView;
+    
 }
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
