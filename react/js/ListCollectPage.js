@@ -51,7 +51,7 @@ export default class ListCollectPage extends Component {
 
         );
     }
-    
+
     _randerContent(){
         return(
 
@@ -61,7 +61,6 @@ export default class ListCollectPage extends Component {
                     dataSource  = {this.state.dataSource}
                     renderRow = {(rowData,sectionid,rowId)=> this._renderRowCell(rowData,sectionid,rowId)}
                     contentContainerStyle={styles.listviewStyle}
-
                 />
 
             </View>
